@@ -12,6 +12,14 @@
         <servlet-name>NewServlet</servlet-name>
         <servlet-class>NewServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logon</servlet-name>
+        <servlet-class>Logon</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logi</servlet-name>
+        <servlet-class>Logi</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logon</servlet-name>
+        <url-pattern>/Logon</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logi</servlet-name>
+        <url-pattern>/Logi</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

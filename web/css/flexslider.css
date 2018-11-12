@@ -114,7 +114,7 @@ html[xmlns] .flexslider .slides {
   text-decoration: none;
   display: block;
   width: 40px;
-  height: 40px;
+  height: 10px;
   margin: -20px 0 0;
   position: absolute;
   top: 50%;
@@ -242,7 +242,7 @@ html[xmlns] .flexslider .slides {
 }
 .flex-control-thumbs img {
   width: 100%;
-  height: auto;
+  height: 10px;
   display: block;
   opacity: .7;
   cursor: pointer;

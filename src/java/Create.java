@@ -15,7 +15,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Laura
@@ -38,14 +39,22 @@ public class Create extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             String uname = request.getParameter("uname");
             String pass = request.getParameter("pass");
+            String email = request.getParameter("email");
+            String address = request.getParameter("address");
+            String phone = request.getParameter("phone");
+          
+            
             MyDB db = new MyDB();
             Connection con = db.getCon();
             Statement stmt = con.createStatement();
-            stmt.executeUpdate("insert into user(name,pass) values('"+uname+"','"+pass+"')");
-            out.println("good");
+            stmt.executeUpdate("insert into user(name,pass, email, address,phone) values('"+uname+"','"+pass+"','"+email+"','"+address+"','"+phone+"')");
+           
+            out.println("Account Created");
         } catch (SQLException ex) {
             Logger.getLogger(Create.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
