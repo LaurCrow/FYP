@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.*;
+import javax.servlet.RequestDispatcher;
 import javax.swing.JOptionPane;
 /**
  *
@@ -48,8 +49,8 @@ public class Create extends HttpServlet {
             Connection con = db.getCon();
             Statement stmt = con.createStatement();
             stmt.executeUpdate("insert into user(name,pass, email, address,phone) values('"+uname+"','"+pass+"','"+email+"','"+address+"','"+phone+"')");
-           
-            out.println("Account Created");
+           RequestDispatcher rd = request.getRequestDispatcher("/welcome.html");
+            rd.forward(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(Create.class.getName()).log(Level.SEVERE, null, ex);
             
