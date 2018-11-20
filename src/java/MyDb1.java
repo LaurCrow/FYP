@@ -15,23 +15,35 @@ import java.util.logging.Logger;
  *
  * @author Laura
  */
-public class MyDB {
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Oops
+ */
+public class MyDb1 {
     Connection con;
+    
     public Connection getCon()
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore", "root", "Laura6531*");
-            
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(MyDB.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MyDb1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(MyDB.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MyDb1.class.getName()).log(Level.SEVERE, null, ex);
         }
-                
-         return con;
-                
+        
+        return con;
     }
+    
 }
+    
 
