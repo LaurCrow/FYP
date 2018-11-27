@@ -49,7 +49,7 @@ public class Create extends HttpServlet {
             Connection con = db.getCon();
             Statement stmt = con.createStatement();
             stmt.executeUpdate("insert into user(name,pass, email, address,phone) values('"+uname+"','"+pass+"','"+email+"','"+address+"','"+phone+"')");
-           RequestDispatcher rd = request.getRequestDispatcher("/welcome.html");
+           RequestDispatcher rd = request.getRequestDispatcher("/Login.html");
             rd.forward(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(Create.class.getName()).log(Level.SEVERE, null, ex);
