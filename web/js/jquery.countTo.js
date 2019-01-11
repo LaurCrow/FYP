@@ -1,3 +1,4 @@
+/*received from www.freehtml5.com as part of bootstrap */
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD

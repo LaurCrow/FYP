@@ -1,4 +1,5 @@
 /*!
+ * received from www.freehtml5.com as part of bootstrap 
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
  *

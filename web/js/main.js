@@ -1,3 +1,4 @@
+/* received from www.freehtml5.com as part of bootstrap */
 ;(function () {
 	
 	'use strict';

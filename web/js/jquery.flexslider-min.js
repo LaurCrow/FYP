@@ -1,4 +1,5 @@
 /*
+ * received from www.freehtml5.com as part of bootstrap 
  * jQuery FlexSlider v2.6.0
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith

@@ -1,3 +1,5 @@
+<!--Take out------- received bootstrap from www.freehtml5.com -->
+<!-- imports the java statement -->
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.util.logging.Logger"%>
 <%@page import="java.util.logging.Level"%>
@@ -24,22 +26,16 @@
 
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
-
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
-
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	
 
 	</head>
 	<body>
@@ -52,11 +48,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2">
+                                            <!-- Website title -->
 						<div id="fh5co-logo"><a href="indexx.html">ALT<span>.</span></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							
+							<!-- Dropdown menu -->
 							<li class="has-dropdown">
 								<a href="indexx.html.html">My Account</a>
 								<ul class="dropdown">
