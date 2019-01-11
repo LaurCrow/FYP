@@ -1,5 +1,5 @@
 /*
- Import the java statements
+ Import the java
  */
 
 import java.io.IOException;
