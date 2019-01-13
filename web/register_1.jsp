@@ -16,18 +16,17 @@
        
         <%
     
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String pass = request.getParameter("password");
-        String address = request.getParameter("address");
-        String mobile = request.getParameter("contact");
+       
+        String TestType = request.getParameter("TestType");
+         String uid = request.getParameter("uid");
+
         try{
           Class.forName("com.mysql.jdbc.Driver");
           Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alt", "root", "Laura6531*");
             
          
           Statement stmt = con.createStatement();
-          stmt.execute("insert into register(name,email,address,pass,contact)values('"+name+"','"+email+"','"+address+"','"+pass+"','"+mobile+"')");
+          stmt.execute("insert into orders(TestType, uid)values('"+TestType+"','"+uid+"')");
           out.println("registration success");
           response.sendRedirect("login.jsp");
         }catch(Exception e){

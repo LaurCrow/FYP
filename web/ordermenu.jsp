@@ -1,11 +1,14 @@
-<!--received bootstrap from www.freehtml5.com -->
-<!--Import the java statments -->
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
+<!--Take out------- received bootstrap from www.freehtml5.com -->
+<!-- imports the java statement -->
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<!--received bootstrap from www.freehtml5.com -->
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -13,6 +16,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ALT</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
 	
 	<!-- Animate.css -->
@@ -33,10 +38,10 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
-
 	</head>
-    <body>
-        <div class="fh5co-loader"></div>
+	<body>
+		
+	<div class="fh5co-loader"></div>
 	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
@@ -53,13 +58,13 @@
 							<li class="has-dropdown">
 								<a href="indexx.html.html">My Account</a>
 								<ul class="dropdown">
-									<li><a href="ordermenu.html">Order New Test</a></li>
-									<li><a href="previous.html">View Results</a></li>
-                                                                        <li><a href="previous.html">View Previous Orders</a></li>
+									<li><a href=".html">Order New Test</a></li>
+									<li><a href=".html">View Results</a></li>
+                                                                        <li><a href=".html">View Previous Orders</a></li>
 								</ul>
 							</li>
-							<li class="btn-cta"><a href="Login.html"><span>Log out</span></a></li>
-                                                        <li class="btn-cta"><a href="accountDetails.jsp"><span>Edit Account Details</span></a></li>
+							<li class="btn-cta"><a href="Logout.html"><span>Log out</span></a></li>
+                                                        <li class="btn-cta"><a href="Logout.html"><span>Account Details</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,16 +72,9 @@
 			</div>
 		</div>
 	</nav>
-        <div>
-        <aside id="fh5co-hero" class="js-fullheight">
-		<div class="flexslider js-fullheight">
-			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_1.jpg);">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-		   				<div class="slider-text-inner desc">
-        <%
+            <!-- Test selection choices -->
+            <div id="header-section" class="header-section">
+                 <%
         //YouTube Tutorial https://www.youtube.com/watch?v=wK2nWOAh9eY&t=188s
          try{
             //If the session id is null, do not create session
@@ -97,14 +95,12 @@
           rs.next();
           //Retrieve the detaails from the results set for the applicable variable 
           String name = rs.getString("name");
-          String email = rs.getString("email");
-          String mob = rs.getString("contact");
-          String address = rs.getString("address");
+         ;
           %>
           <!--Display the details -->
-           <h1>Welcome <%out.print(name);%></h1>
-           <h1>Your Mail : <%out.print(email);%></h1>
-           <h1>Your Mobile : <%out.print(mob);%></h1>
+           
+           <center><h1 style="font-size:28px;"  class="heading-section">Choose your Test Type <%out.print(name);%></h1></center>
+           
            
            <%
          }catch(Exception e){
@@ -114,44 +110,46 @@
           
        
         %>
-       </div>
-		   			</div>
-		   		</div>
-		   	</li>
-		  	</ul>
-	  	</div>
-	</aside>
-       <!--Menu options -->
-        <div id="fh5co-project">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Menu Options</h2>
-				</div>
-			</div>
-		</div>
+                
+            </div>  
+	<div id="fh5co-blog" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-sm-6 text-center fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="ordermenu.jsp"><img src="images/project-1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>Order Test</h3>
-						
-					</a>
+				<div class="col-lg-4 col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="#"><img  src="images/project-1.jpg" alt="" height="200" width="42"></a>
+			        			<div class="blog-text">
+							<h3><a href="#">Chemical Test</a></h3>
+							<p>Tests for the following qualities; Ammonia, Chloride, Conductivity, Hardness, Nitrates, Nitrites, PH, Iron</p>
+							<a href="OrderSumChem.jsp" class="btn btn-primary">Order Now 90.00</a>
+						</div> 
+					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 text-center fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/project-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>View Results</h3>
-					</a>
+				<div class="col-lg-4 col-md-4">
+					<div class="fh5co-blog animate-box">
+                                           
+                        
+						<a href="#"><img  src="images/project-2.jpg" alt="" height="200" width="42"></a>
+						<div class="blog-text">
+							<h3><a href="#">Microbiological Test</a></h3>
+							<p>Tests for the presence bacterium in drinking water, specifically E. coli and Coliforms</p>
+                                                        <a href="#" class="btn btn-primary">Order Now 30.00</a>
+						</div> 
+                                                
+					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 text-center fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="previous.html"><img src="images/project-3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>View Previous Orders</h3>
-						
-					</a>
+				<div class="col-lg-4 col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="#"><img  src="images/project-3.jpg" alt="" height="200" width="42"></a>
+						<div class="blog-text">
+							<h3><a href="#">Full Analysis</a></h3>
+							<p>Tests drinking water sample for the presence bacterium and chemical presences</p>
+                                                        <a href="#" class="btn btn-primary">Order Now 120.00</a>
+					</div>
+				</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -178,6 +176,3 @@
 	</body>
 </html>
 
-                
-        
-     

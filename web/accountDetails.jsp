@@ -1,4 +1,6 @@
-<!--Take out------- received bootstrap from www.freehtml5.com -->
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<!--received bootstrap from www.freehtml5.com -->
 <!-- imports the java statement -->
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.util.logging.Logger"%>
@@ -79,20 +81,52 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-4">
 				<div class="row form-group">
-                                    <table id="account-details">
-                                         <tr>
-                                   
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Email</th>
-                                    <th>Password</th>
-                                    <th>Action</th>
-                                      <tr><td></td> 
-                            
-            </tr>
-                                        
-                                    </table>		
+                                     <%
+        //YouTube Tutorial https://www.youtube.com/watch?v=wK2nWOAh9eY&t=188s
+         try{
+            //If the session id is null, do not create session
+              String session_id =null;
+        HttpSession session1=request.getSession(false); 
+        //if the session id is not null, the session id is the attriute name
+        if(session1!=null){  
+        session_id=(String)session1.getAttribute("name");  
+       
+        }
+             //using the jdbc driver
+             Class.forName("com.mysql.jdbc.Driver");
+             //Create the connection with fyp database
+          Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alt", "root", "Laura6531*");
+          Statement stmt = con.createStatement();
+          //Select the data from the database where the user id is equal to the session id
+          ResultSet rs = stmt.executeQuery("select * from register where uid='"+session_id+"'");
+          rs.next();
+          //Retrieve the detaails from the results set for the applicable variable 
+          String name = rs.getString("name");
+          String email = rs.getString("email");
+          String pass = rs.getString("pass");
+          String mob = rs.getString("contact");
+          String address = rs.getString("address");
+          %>
+          <!--Display the details -->
+           <h1>Your Name : <%out.print(name);%></h1>
+           <h1>Your Email : <%out.print(email);%></h1>
+           <h1>Your Password : <%out.print(pass);%></h1>
+           <h1>Your Address : <%out.print(address);%></h1>
+           <h1>Your Mobile : <%out.print(mob);%></h1>
+           <form action="Delete" method="post">
+ 
+                                 <input value="Delete Account"   type="submit" class="btn" style="padding-bottom: 30px;"> 
+            </form>
+
+           
+           <%
+         }catch(Exception e){
+          out.println(e);
+         }
+     
+          
+       
+        %>
 				</div>
 			
 				

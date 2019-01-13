@@ -28,6 +28,10 @@
         <servlet-name>Loginn</servlet-name>
         <servlet-class>Loginn</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Add_Chem</servlet-name>
+        <servlet-class>Add_Chem</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Create</servlet-name>
         <url-pattern>/Create</url-pattern>
@@ -60,6 +64,10 @@
         <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
         <param-value>client</param-value>
     </context-param>
+    <servlet-mapping>
+        <servlet-name>Add_Chem</servlet-name>
+        <url-pattern>/Add_Chem</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
