@@ -74,13 +74,9 @@
 		</div>
 	</nav>
             <div id="header-section" class="header-section">
-                <center><h1 style="font-size:28px;"  class="heading-section">Your Account Details</h1></center>
-            </div>
-	<div id="fh5co-blog" class="fh5co-bg-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-4">
-				<div class="row form-group">
+                <center><h1 style="font-size:28px;"  class="heading-section">Your Order Summary</h1></center>
+           
+
                                      <%
         //YouTube Tutorial https://www.youtube.com/watch?v=wK2nWOAh9eY&t=188s
          try{
@@ -110,14 +106,14 @@
            <form action="register_1.jsp" method="post">
     
           <h1>Chemical testing of water quality</h1>
-           <h1>Will be sent to: <%out.print(email);%></h1>
-           <h1>And posted to : <%out.print(address);%></h1>
-           <h1>On Approx date></h1
+           <h1>Will be sent to <%out.print(email);%></h1>
+           <h1>And posted to <%out.print(address);%></h1>
+           <h1>On Approx date</h1
            
 
         <input style="height:30px" size="25" type="text" name ="TestType" value ="Chemical"/>
 							
-	<input style="height:30px" size="25" type="text" name ="uid" value ="<%out.print(uid);%>" />
+        <input  style="height:30px" size="25" type="text" name ="uid" value ="<%out.print(uid);%>" />
 							
 	<input align="middle" type="submit" value ="Place Order" />
      
@@ -137,7 +133,7 @@
 				
 				</div>
 			</div>
-		</div>
+		</div>  
 	</div>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
