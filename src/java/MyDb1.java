@@ -34,7 +34,7 @@ public class MyDb1 {
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alt", "root", "Laura6531*");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore", "root", "Laura6531*");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(MyDb1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

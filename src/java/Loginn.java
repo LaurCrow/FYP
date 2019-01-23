@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -47,7 +41,7 @@ public class Loginn extends HttpServlet {
           Statement stmt = con.createStatement();
          ResultSet rs = stmt.executeQuery("select uid,name,pass from register where email = '"+name+"' and  pass = '"+pass+"'");
        while ((rs.next())) {
-
+       
             String uid = rs.getString("uid");
             
              

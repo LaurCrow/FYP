@@ -68,15 +68,8 @@
 		</div>
 	</nav>
         <div>
-        <aside id="fh5co-hero" class="js-fullheight">
-		<div class="flexslider js-fullheight">
-			<ul class="slides">
-		   	<li style="background-image: url(images/clean-running-water-using-filtration.jpg);">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-		   				<div class="slider-text-inner desc">
-        <%
+        
+    <%
         //YouTube Tutorial https://www.youtube.com/watch?v=wK2nWOAh9eY&t=188s
          try{
             //If the session id is null, do not create session
@@ -92,21 +85,32 @@
              //Create the connection with fyp database
           Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore", "root", "Laura6531*");
           Statement stmt = con.createStatement();
+          String sql = "select image from register where uid='"+session_id+"'";
+
           //Select the data from the database where the user id is equal to the session id
-          ResultSet rs = stmt.executeQuery("select * from register where uid='"+session_id+"'");
+          ResultSet rs = stmt.executeQuery(sql);
           rs.next();
+         
           //Retrieve the detaails from the results set for the applicable variable 
-          String name = rs.getString("name");
-          String email = rs.getString("email");
-          String mob = rs.getString("contact");
-          String address = rs.getString("address");
-          %>
-          <!--Display the details -->
-           <h1>Welcome <%out.print(name);%></h1>
-           <h1>Your Mail : <%out.print(email);%></h1>
-           <h1>Your Mobile : <%out.print(mob);%></h1>
+
+         
+        
+          
+        
+            %>
            
-           <%
+            <table style="width:100%">
+                <tr>
+                <tr>ID</tr>
+                <th>Image</th>
+            </tr>
+            <tr>
+        
+            </tr>
+            </table>
+
+       <%    
+         
          }catch(Exception e){
           out.println(e);
          }
@@ -114,6 +118,9 @@
           
        
         %>
+      
+
+
        </div>
 		   			</div>
 		   		</div>
@@ -121,37 +128,6 @@
 		  	</ul>
 	  	</div>
 	</aside>
-       <!--Menu options -->
-        <div id="fh5co-project">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Menu Options</h2>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-6 text-center fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="ordermenu.jsp"><img src="images/project-1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>Order Test</h3>
-						
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 text-center fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="Rett.jsp"><img src="images/project-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>View Results</h3>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 text-center fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="previous.html"><img src="images/project-3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>View Previous Orders</h3>
-						
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
 	</div>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>

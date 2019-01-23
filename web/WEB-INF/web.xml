@@ -32,6 +32,10 @@
         <servlet-name>Add_Chem</servlet-name>
         <servlet-class>Add_Chem</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Ret</servlet-name>
+        <servlet-class>Ret</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Create</servlet-name>
         <url-pattern>/Create</url-pattern>
@@ -67,6 +71,10 @@
     <servlet-mapping>
         <servlet-name>Add_Chem</servlet-name>
         <url-pattern>/Add_Chem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Ret</servlet-name>
+        <url-pattern>/Ret</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
