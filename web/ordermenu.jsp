@@ -144,7 +144,7 @@
 						<div class="blog-text">
 							<h3><a href="#">Full Analysis</a></h3>
 							<p>Tests drinking water sample for the presence bacterium and chemical presences</p>
-                                                        <a href="#" class="btn btn-primary">Order Now 120.00</a>
+                                                        <a href="OrderSumFull.jsp" class="btn btn-primary">Order Now 120.00</a>
 					</div>
 				</div>
 				</div>

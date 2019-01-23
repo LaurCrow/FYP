@@ -74,7 +74,7 @@
 		</div>
 	</nav>
             <div id="header-section" class="header-section">
-                <center><h1 style="font-size:28px;"  class="heading-section">Your Account Details</h1></center>
+                <center><h1 style="font-size:28px;"  class="heading-section">To edit your account details, please make ammendments</h1></center>
             </div>
 	<div id="fh5co-blog" class="fh5co-bg-section">
 		<div class="container">
@@ -107,16 +107,18 @@
           String mob = rs.getString("contact");
           String address = rs.getString("address");
           %>
-          <!--Display the details -->
-           <h1>Your Name : <%out.print(name);%></h1>
-           <h1>Your Email : <%out.print(email);%></h1>
-           <h1>Your Password : <%out.print(pass);%></h1>
-           <h1>Your Address : <%out.print(address);%></h1>
-           <h1>Your Mobile : <%out.print(mob);%></h1>
-           <form action="Delete" method="post">
- 
-                                 <input value="Delete Account"   type="submit" class="btn" style="padding-bottom: 30px;"> 
-            </form>
+         <form action="register_2.jsp" method="post">
+					
+        <input  style="height:30px" size="20" type="text" name ="name" value ="<%out.print(name);%>" />
+        <input  style="height:30px" size="20" type="text" name ="email" value ="<%out.print(email);%>" />
+        <input  style="height:30px" size="20" type="text" name ="pass" value ="<%out.print(pass);%>" />
+        <input  style="height:30px" size="20" type="text" name ="mob" value ="<%out.print(mob);%>" />
+        <input  style="height:30px" size="20" type="text" name ="address" value ="<%out.print( address);%>" />					
+	<input class="btn btn-default btn-lg" align="middle" type="submit" value ="Change Details" />
+      
+
+                       </form>
+        <p><a href="Login.html" class="btn btn-default btn-lg">Delete account</a>
 
            
            <%

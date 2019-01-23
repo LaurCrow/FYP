@@ -107,16 +107,16 @@
     
            <form action="register_1.jsp" method="post">
      
-          <p>Chemical testing of water quality. Results will be sent to <%out.print(email);%> and posted to <%out.print(address);%> by approx date</p>
-          <p>Total Price; 90</p>
+          <p>Full analysis testing of water quality. Results will be sent to <%out.print(email);%> and posted to <%out.print(address);%> by approx date</p>
+          <p>Total Price; 120</p>
            <p><u>Testing Type -  User ID</u></p>
            
 
-        <input style="height:30px" size="12" type="text" name ="TestType" value ="Microbiological" />
+        <input style="height:30px" size="12" type="text" name ="TestType" value ="Full Analysis" />
 							
         <input  style="height:30px" size="4" type="text" name ="uid" value ="<%out.print(uid);%>" />
 							
-	<input class="btn-cta" align="middle" type="submit" value ="Place Order" />
+	<input class="btn btn-default btn-lg" align="middle" type="submit" value ="Place Order" />
 
                        </form>
       

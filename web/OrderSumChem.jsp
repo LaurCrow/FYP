@@ -38,12 +38,10 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	
-
 	</head>
-	<body>
-		
+        
+	<body>	
 	<div class="fh5co-loader"></div>
-	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="top-menu">
@@ -57,27 +55,31 @@
 						<ul>
 							<!-- Dropdown menu -->
 							<li class="has-dropdown">
-								<a href="indexx.html.html">My Account</a>
+								<a href="indexx.html.html">Home</a>
 								<ul class="dropdown">
-									<li><a href=".html">Order New Test</a></li>
-									<li><a href=".html">View Results</a></li>
-                                                                        <li><a href=".html">View Previous Orders</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
 								</ul>
 							</li>
-							<li class="btn-cta"><a href="Logout.html"><span>Log out</span></a></li>
-                                                        <li class="btn-cta"><a href="Logout.html"><span>Account Details</span></a></li>
+							<li class="btn-cta"><a href="Login.html"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="index.html"><span>Sign Up</span></a></li>
+                                                      
 						</ul>
+                                             
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</nav>
-            <div id="header-section" class="header-section">
-                <center><h1 style="font-size:28px;"  class="heading-section">Your Order Summary</h1></center>
-           
-
-                                     <%
+	
+	<div id="fh5co-content">
+		
+		<div class="choose animate-box">
+			<div class="fh5co-heading">
+				<h2>Your Order Summary</h2>
+                               
+				
+			                                     <%
         //YouTube Tutorial https://www.youtube.com/watch?v=wK2nWOAh9eY&t=188s
          try{
             //If the session id is null, do not create session
@@ -102,23 +104,22 @@
           String address = rs.getString("address");
           %>
           <!--Display the details -->
- 
-           <form action="register_1.jsp" method="post">
     
-          <h1>Chemical testing of water quality</h1>
-           <h1>Will be sent to <%out.print(email);%></h1>
-           <h1>And posted to <%out.print(address);%></h1>
-           <h1>On Approx date</h1
+           <form action="register_1.jsp" method="post">
+     
+          <p>Chemical testing of water quality. Results will be sent to <%out.print(email);%> and posted to <%out.print(address);%> by approx date</p>
+          <p>Total Price; 90</p>
+           <p><u>Testing Type -  User ID</u></p>
            
 
-        <input style="height:30px" size="25" type="text" name ="TestType" value ="Chemical"/>
+        <input style="height:30px" size="12" type="text" name ="TestType" value ="Chemical" />
 							
-        <input  style="height:30px" size="25" type="text" name ="uid" value ="<%out.print(uid);%>" />
+        <input  style="height:30px" size="4" type="text" name ="uid" value ="<%out.print(uid);%>" />
 							
-	<input align="middle" type="submit" value ="Place Order" />
-     
-       
+	<input class="btn btn-default btn-lg" align="middle" type="submit" value ="Place Order" />
+
                        </form>
+      
 
            <%
          }catch(Exception e){
@@ -129,12 +130,24 @@
        
         %>
 				</div>
+                        </div>
+<style>
+.imgDes {
+  margin-left: 40px;
+  overflow: hidden;
+  text-align: right;
+  </style>
+
+                                 <div class="imgDes">
+                                       <img src="images/lab.jpg" align="Bottom" title="lab">
 			
-				
-				</div>
 			</div>
-		</div>  
+		</div>
 	</div>
+	 <div id="fh5co-started" style="background-image:url(images/img_bg_2.jpg);" height="50px">
+				</div>
+
+	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -143,17 +156,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 

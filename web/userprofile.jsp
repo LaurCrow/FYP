@@ -90,7 +90,7 @@
              //using the jdbc driver
              Class.forName("com.mysql.jdbc.Driver");
              //Create the connection with fyp database
-          Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore", "root", "Laura6531*");
+          Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alt", "root", "Laura6531*");
           Statement stmt = con.createStatement();
           //Select the data from the database where the user id is equal to the session id
           ResultSet rs = stmt.executeQuery("select * from register where uid='"+session_id+"'");
