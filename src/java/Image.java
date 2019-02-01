@@ -16,7 +16,7 @@ public static void main(String[] args){
        Class.forName(driverName);
        con = DriverManager.getConnection(url+dbName,userName,password);
        Statement st = con.createStatement();
-       File imgfile = new File("C:\\Users\\Laura\\OneDrive\\Documents\\NetBeansProjects\\Final Year Projec\\web\\images\\lab.jpg");
+       File imgfile = new File("C:\\Users\\Laura\\OneDrive\\Documents\\NetBeansProjects\\Final Year Projec\\web\\images\\lab.png");
 
       FileInputStream fin = new FileInputStream(imgfile);
 
