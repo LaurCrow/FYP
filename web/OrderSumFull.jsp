@@ -107,7 +107,8 @@
     
            <form action="register_1.jsp" method="post">
      
-          <p>Full analysis testing of water quality. Results will be sent to <%out.print(email);%> and posted to <%out.print(address);%> by approx date</p>
+               <p>Full analysis testing of water quality.Tests for the presence bacterium in drinking water, specifically E. coli and Coliforms and the following qualities; Ammonia, Chloride, Conductivity, Hardness, Nitrates, Nitrites, PH, Iron. </p>
+               <p> Water testing kit will be sent to <%out.print(address);%>. Order confirmation and results will be sent to <%out.print(email);%> and available on this application in approx 2 weeks</p>
           <p>Total Price; 120</p>
            <p><u>Testing Type -  User ID</u></p>
            

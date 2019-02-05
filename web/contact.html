@@ -79,7 +79,7 @@
 					<div class="fh5co-contact-info">
 						<h3>Contact Information</h3>
 						<ul>
-							<li class="address">ALT, Unit 4, Newbridge Industrial Estate, Co. Kildare.</li>
+							<li class="address">ALT, Unit 4, Newbridge, Co. Kildare.</li>
 							<li><a href="tel://+353 (045) 491600">+353 (045) 491600</a></li>
                                                         <li><a href="tel://+(0)45 434355">(0)45 434355</a></li>
 						</ul>
@@ -88,29 +88,27 @@
 				</div>
 				<div class="col-md-6 animate-box">
 					<h3>Send A Message</h3>
-					<form action="#">
+            
+					<form action="contact.jsp" method="post">
 						<div class="row form-group">
 							<div class="col-md-6">
-								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+                                                                <input class="form-control" name="fname"  placeholder="Your first name" type="text"  required="required">
 							</div>
 							<div class="col-md-6">
-								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+								<input class="form-control" name="lname"  placeholder="Your last name" type="text" required="required">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+								<input class="form-control" name="email"  placeholder="Your email" type="text" required="required">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+								<input class="form-control" name="sub"  placeholder="Subject of message" type="text" required="required">
 							</div>
 						</div>
 

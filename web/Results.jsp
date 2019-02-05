@@ -75,48 +75,21 @@
 	</nav>
             <div id="header-section" class="header-section">
                 <center><h1 style="font-size:28px;"  class="heading-section">Test Results</h1></center>
-                <P>You have no new results</p>
             </div>
 	<div id="fh5co-blog" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4">
 				<div class="row form-group">
-                                     <%
-        //YouTube Tutorial https://www.youtube.com/watch?v=wK2nWOAh9eY&t=188s
-         try{
-            //If the session id is null, do not create session
-              String session_id =null;
-        HttpSession session1=request.getSession(false); 
-        //if the session id is not null, the session id is the attriute name
-        if(session1!=null){  
-        session_id=(String)session1.getAttribute("name");  
-       
-        }
-             //using the jdbc driver
-             Class.forName("com.mysql.jdbc.Driver");
-             //Create the connection with fyp database
-          Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alt", "root", "Laura6531*");
-          Statement stmt = con.createStatement();
-          //Select the data from the database where the user id is equal to the session id
-          ResultSet rs = stmt.executeQuery("select * from register where uid='"+session_id+"'");
-          rs.next();
-          //Retrieve the detaails from the results set for the applicable variable 
-          String name = rs.getString("name");
-          String email = rs.getString("email");
-          String pass = rs.getString("pass");
-          String mob = rs.getString("contact");
-          String address = rs.getString("address");
-         }catch(Exception e){
-          out.println(e);
-         }
      
-          
-       
-        %>
-				</div>
-			
-				
+    <body>
+        <h1>Your Results</h1>
+        <form action="viewImage.jsp" method="post">
+            <input type="text" name="id" required="required" placeholder="enter user id"/><br/><br/>
+            <input type="submit"/>
+        </form>
+
+				</div>		
 				</div>
 			</div>
 		</div>

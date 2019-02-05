@@ -107,8 +107,9 @@
     
            <form action="register_1.jsp" method="post">
      
-          <p>Microbiological testing of water quality. Results will be sent to <%out.print(email);%> and posted to <%out.print(address);%> by approx date</p>
-          <p>Total Price; 90</p>
+               <p>Microbiological testing of water quality. Tests for the presence bacterium in drinking water, specifically E. coli and Coliforms. </p>
+               <p>Water testing kit will be sent to <%out.print(address);%>. Order confirmation and results will be sent to <%out.print(email);%> and available on this application in approx 2 weeks</p>
+          <p>Total Price; 30</p>
            <p><u>Testing Type -  User ID</u></p>
            
 

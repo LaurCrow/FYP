@@ -107,7 +107,8 @@
     
            <form action="register_1.jsp" method="post">
      
-          <p>Chemical testing of water quality. Results will be sent to <%out.print(email);%> and posted to <%out.print(address);%> by approx date</p>
+               <p>Chemical testing of water quality. Tests for the following qualities; Ammonia, Chloride, Conductivity, Hardness, Nitrates, PH, Iron. </p>
+               <p>Water testing kit will be sent to <%out.print(address);%>. Order confirmation and results will be sent to <%out.print(email);%> and available on this application in approx 2 weeks</p>
           <p>Total Price; 90</p>
            <p><u>Testing Type -  User ID</u></p>
            
