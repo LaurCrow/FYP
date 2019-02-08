@@ -29,31 +29,34 @@ public class Loginn extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+   // https://www.youtube.com/watch?v=akW6bzoRcZo
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            /* https://stackoverflow.com/questions/10915375/create-a-class-to-connect-to-any-database-using-jdbc. */
             String name = request.getParameter("name");
             String pass = request.getParameter("pass");
             MyDb1 db = new MyDb1();
           Connection con = db.getCon();
           Statement stmt = con.createStatement();
          ResultSet rs = stmt.executeQuery("select uid,name,pass from register where email = '"+name+"' and  pass = '"+pass+"'");
-       while ((rs.next())) {
+       //I googled how to create session and found this on stackover flow https://stackoverflow.com/questions/26479217/how-to-create-session-for-login-and-logout-in-java. I kept getting errors with the next part of code https://stackoverflow.com/questions/53378978/error-java-lang-illegalstateexception-cannot-create-a-session-after-the-respon
+         while ((rs.next())) {
        
             String uid = rs.getString("uid");
-            
-             
+
              //out.println("User id"+uid);
               HttpSession session=request.getSession();  
               session.setAttribute("name",uid);
               response.sendRedirect("http://localhost:8080/Final_Year_Projec/userprofile.jsp");  
+              
 } 
         
 
 } catch (SQLException ex) {
             Logger.getLogger(Loginn.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
 }
     @Override

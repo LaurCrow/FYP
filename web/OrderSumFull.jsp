@@ -105,7 +105,7 @@
           %>
           <!--Display the details -->
     
-           <form action="register_1.jsp" method="post">
+           <form action="order.jsp" method="post">
      
                <p>Full analysis testing of water quality.Tests for the presence bacterium in drinking water, specifically E. coli and Coliforms and the following qualities; Ammonia, Chloride, Conductivity, Hardness, Nitrates, Nitrites, PH, Iron. </p>
                <p> Water testing kit will be sent to <%out.print(address);%>. Order confirmation and results will be sent to <%out.print(email);%> and available on this application in approx 2 weeks</p>
@@ -113,9 +113,9 @@
            <p><u>Testing Type -  User ID</u></p>
            
 
-        <input style="height:30px" size="12" type="text" name ="TestType" value ="Full Analysis" />
+        <input  readonly=readonly style="height:30px" size="12" type="text" name ="TestType" value ="Full Analysis" />
 							
-        <input  style="height:30px" size="4" type="text" name ="uid" value ="<%out.print(uid);%>" />
+        <input  readonly=readonly style="height:30px" size="4" type="text" name ="uid" value ="<%out.print(uid);%>" />
 							
 	<input class="btn btn-default btn-lg" align="middle" type="submit" value ="Place Order" />
 

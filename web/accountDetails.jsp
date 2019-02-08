@@ -107,7 +107,7 @@
           String mob = rs.getString("contact");
           String address = rs.getString("address");
           %>
-         <form action="register_2.jsp" method="post">
+         <form action="edit.jsp" method="post">
 					
         <input  style="height:30px" size="20" type="text" name ="name" value ="<%out.print(name);%>" />
         <input  style="height:30px" size="20" type="text" name ="email" value ="<%out.print(email);%>" />

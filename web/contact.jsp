@@ -14,7 +14,7 @@
     <body>
        
         <%
-    
+            //Same idea as the register page
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String email = request.getParameter("email");

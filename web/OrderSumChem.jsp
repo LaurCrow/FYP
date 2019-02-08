@@ -105,7 +105,7 @@
           %>
           <!--Display the details -->
     
-           <form action="register_1.jsp" method="post">
+           <form action="order.jsp" method="post">
      
                <p>Chemical testing of water quality. Tests for the following qualities; Ammonia, Chloride, Conductivity, Hardness, Nitrates, PH, Iron. </p>
                <p>Water testing kit will be sent to <%out.print(address);%>. Order confirmation and results will be sent to <%out.print(email);%> and available on this application in approx 2 weeks</p>
@@ -113,9 +113,9 @@
            <p><u>Testing Type -  User ID</u></p>
            
 
-        <input style="height:30px" size="12" type="text" name ="TestType" value ="Chemical" />
+        <input readonly=readonly style="height:30px" size="12" type="text" name ="TestType" value ="Chemical" />
 							
-        <input  style="height:30px" size="4" type="text" name ="uid" value ="<%out.print(uid);%>" />
+        <input  readonly=readonly style="height:30px" size="4" type="text" name ="uid" value ="<%out.print(uid);%>" />
 							
 	<input class="btn btn-default btn-lg" align="middle" type="submit" value ="Place Order" />
 

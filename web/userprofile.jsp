@@ -139,7 +139,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 text-center fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="Rett.jsp"><img src="images/project-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+					<a href="Results.html"><img src="images/project-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
 						<h3>View Results</h3>
 					</a>
 				</div>

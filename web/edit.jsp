@@ -15,6 +15,7 @@
     <body>
        
         <%
+            //Same idea as register page and userprofile page
             try{
             //If the session id is null, do not create session
               String session_id =null;
@@ -36,11 +37,11 @@
           Class.forName("com.mysql.jdbc.Driver");
           Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alt", "root", "Laura6531*");
             
-         
+         //I asked a question regarding the concat bit on stackoverflow https://stackoverflow.com/questions/54328838/i-am-trying-to-update-my-mysql-database-however-when-i-try-update-more-than-one/54329056#54329056
           Statement stmt = con.createStatement();
           stmt.execute(" update register set pass = concat('"+pass+"'),address = concat('"+address+"'),name = concat('"+name+"'),email= concat('"+email+"')where uid='"+session_id+"'");
           out.println("Edit success");
-          response.sendRedirect("login.jsp");
+          response.sendRedirect("Login.html");
            
         }catch(Exception e){
             

@@ -5,31 +5,14 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Laura
- */
-
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Oops
- */
+//https://www.youtube.com/watch?v=akW6bzoRcZo
 public class MyDb1 {
+
+    static Connection getConnection() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     Connection con;
-    
+    //https://stackoverflow.com/questions/10915375/create-a-class-to-connect-to-any-database-using-jdbc
     public Connection getCon()
     {
         try {

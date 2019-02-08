@@ -16,7 +16,7 @@
        
         <%
     
-       
+       //Same idea as register
         String TestType = request.getParameter("TestType");
          String uid = request.getParameter("uid");
 
@@ -28,7 +28,7 @@
           Statement stmt = con.createStatement();
           stmt.execute("insert into orders(TestType, uid)values('"+TestType+"','"+uid+"')");
           out.println("registration success");
-          response.sendRedirect("login.jsp");
+          response.sendRedirect("Login.html");
         }catch(Exception e){
             
         }

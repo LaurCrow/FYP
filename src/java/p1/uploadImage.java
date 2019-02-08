@@ -1,3 +1,4 @@
+     //YouTube Tutorial https://youtu.be/ROfQah8CV6k 
 package p1;
 
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class uploadImage extends HttpServlet {
         if (part != null) {
             try {
                 Connection con = DB.getConnection();
-                PreparedStatement ps = con.prepareStatement("insert into dat(image) values(?)");
+                PreparedStatement ps = con.prepareStatement("insert into result(image) values(?)");
                 InputStream is = part.getInputStream();
                 ps.setBlob(1, is);
                 result = ps.executeUpdate();

@@ -1,5 +1,5 @@
 /*!
- * received from www.freehtml5.com as part of bootstrap 
+ * received from www.freehtml5.co as part of bootstrap https://freehtml5.co/demos/law/
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
  *

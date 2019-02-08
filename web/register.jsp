@@ -15,7 +15,7 @@
     <body>
        
         <%
-    
+          //YouTube Tutorial https://www.youtube.com/watch?v=wK2nWOAh9eY&t=5s
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String pass = request.getParameter("password");
@@ -29,7 +29,7 @@
           Statement stmt = con.createStatement();
           stmt.execute("insert into register(name,email,address,pass,contact)values('"+name+"','"+email+"','"+address+"','"+pass+"','"+mobile+"')");
           out.println("registration success");
-          response.sendRedirect("login.jsp");
+          response.sendRedirect("Login.html");
         }catch(Exception e){
             
         }

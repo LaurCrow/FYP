@@ -59,13 +59,17 @@
 				<div class="col-md-5 col-md-push-1 animate-box">
 					
 				</div>
+                        </div>
+                        </div>
+                                
+                       
 	<div class="col-md-6 animate-box">
 	<h2 style="color:#F95959;">Create Account</h2>
 
         <form action="register.jsp" method="post">
 
             
-        <input  name="name"  placeholder="Please enter your name" type="text" style="width: 400px;" required="required">
+        <input  name="name"  placeholder="Please enter your nam" type="text" style="width: 400px;" required="required">
            
          <input name="contact"  placeholder="contact" type="text" style="width: 400px;" required="required" >
                        
@@ -85,8 +89,8 @@
 			</div>
 			
 		</div>
-	</div>
-	</div>
+ </div>
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -99,7 +103,7 @@
 	<script src="js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	</body>
+        </body>
 </html>
 
 
