@@ -93,9 +93,15 @@
 
 
           %>
-          <!--Display the details -->
+        <style>
+          .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} </style>
           
-	<img src="getImage.jsp?oid=<%=oid%>" align=middle height="500px" width="700px"/>
+	<img src="getImage.jsp?oid=<%=oid%>" class="center" align=middle height="500px" width="700px"/>
         <p> <%out.print(comment);%></p>
            
            <%

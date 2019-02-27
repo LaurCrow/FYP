@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Edit Success</title>
+        <title>Deletion Success</title>
     </head>
     <body>
        
@@ -39,7 +39,7 @@
             
          //I asked a question regarding the concat bit on stackoverflow https://stackoverflow.com/questions/54328838/i-am-trying-to-update-my-mysql-database-however-when-i-try-update-more-than-one/54329056#54329056
           Statement stmt = con.createStatement();
-          stmt.execute(" update register set pass = concat('"+pass+"'),address = concat('"+address+"'),name = concat('"+name+"'),email= concat('"+email+"')where uid='"+session_id+"'");
+          stmt.execute(" Delete from register where pass = ('"+pass+"') and address =('"+address+"') and name =('"+name+"') and email= ('"+email+"') and uid='"+session_id+"'");
           out.println("Edit success");
           response.sendRedirect("Login.html");
            

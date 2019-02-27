@@ -16,7 +16,7 @@
        
         <%
     
-       //Same idea as register
+       //Same idea as register...https://www.youtube.com/watch?v=wK2nWOAh9eY&t=5s
         String TestType = request.getParameter("TestType");
          String uid = request.getParameter("uid");
 

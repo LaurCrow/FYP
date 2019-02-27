@@ -41,9 +41,9 @@ public class Loginn extends HttpServlet {
           Connection con = db.getCon();
           Statement stmt = con.createStatement();
          ResultSet rs = stmt.executeQuery("select uid,name,pass from register where email = '"+name+"' and  pass = '"+pass+"'");
-       //I googled how to create session and found this on stackover flow https://stackoverflow.com/questions/26479217/how-to-create-session-for-login-and-logout-in-java. I kept getting errors with the next part of code https://stackoverflow.com/questions/53378978/error-java-lang-illegalstateexception-cannot-create-a-session-after-the-respon
+       //I googled how to create session and found this on stackover flow https://stackoverflow.com/questions/26479217/how-to-create-session-for-login-and-logout-in-java. I kept getting errors with the if statement in the next part of code https://stackoverflow.com/questions/53378978/error-java-lang-illegalstateexception-cannot-create-a-session-after-the-respon
          while ((rs.next())) {
-       
+        
             String uid = rs.getString("uid");
 
              //out.println("User id"+uid);

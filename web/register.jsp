@@ -23,11 +23,11 @@
         String mobile = request.getParameter("contact");
         try{
           Class.forName("com.mysql.jdbc.Driver");
-          Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/alt", "root", "Laura6531*");
+          Connection  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/lauraccc_fyp", "lauraccc_root", "Laura6531*");
             
          
           Statement stmt = con.createStatement();
-          stmt.execute("insert into register(name,email,address,pass,contact)values('"+name+"','"+email+"','"+address+"','"+pass+"','"+mobile+"')");
+          stmt.execute("insert into lauraccc_fyp.register(name,email,address,pass,contact)values('"+name+"','"+email+"','"+address+"','"+pass+"','"+mobile+"')");
           out.println("registration success");
           response.sendRedirect("Login.html");
         }catch(Exception e){

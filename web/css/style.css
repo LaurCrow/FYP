@@ -795,12 +795,12 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 32px;
   margin-bottom: 20px;
   line-height: 1.5;
-  color: #000;
+  color: #3CB371;
 }
 .fh5co-heading p {
   font-size: 18px;
   line-height: 1.5;
-  color: #3CB371;
+  color: #000;
 }
 .fh5co-heading span {
   display: block;

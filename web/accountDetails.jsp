@@ -115,10 +115,24 @@
         <input  style="height:30px" size="20" type="text" name ="mob" value ="<%out.print(mob);%>" />
         <input  style="height:30px" size="20" type="text" name ="address" value ="<%out.print( address);%>" />					
 	<input class="btn btn-default btn-lg" align="middle" type="submit" value ="Change Details" />
+     
       
 
                        </form>
-        <p><a href="Login.html" class="btn btn-default btn-lg">Delete account</a>
+        <form action="delete.jsp" method="post">
+					
+        <input  style="height:30px" size="20" type="text" name ="name" value ="<%out.print(name);%>" />
+        <input  style="height:30px" size="20" type="text" name ="email" value ="<%out.print(email);%>" />
+        <input  style="height:30px" size="20" type="text" name ="pass" value ="<%out.print(pass);%>" />
+        <input  style="height:30px" size="20" type="text" name ="mob" value ="<%out.print(mob);%>" />
+        <input  style="height:30px" size="20" type="text" name ="address" value ="<%out.print( address);%>" />					
+	<input class="btn btn-default btn-lg" align="middle" type="submit" value ="Delete Details" />
+     
+      
+
+                       </form>
+
+
 
            
            <%
